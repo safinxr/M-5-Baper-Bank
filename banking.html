@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>  
+    <header class="my-6"><h1 class="text-5xl text-center">Lates gat some <span class="text-cyan-500	font-bold">Monny</span></h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-white">
+                <div class="bg-blue-300 p-6 ">
+                    <h3 class="text-2xl">Deposit</h3>
+                    <h2 class="text-3xl">$ <span id="price">00</span></h2>   
+                </div>
+                <div class="bg-red-300 p-8 ">
+                    <h3 class="text-2xl">Withdraw</h3>
+                    <h2 class="text-3xl">$ <span id="wm">00</span></h2>   
+                </div>
+                <div class="bg-green-300 p-8 ">
+                    <h3 class="text-2xl">Balance</h3>
+                    <h2 class="text-3xl">$ <span id="bal">1200</span></h2>   
+                </div>
+            </div>
+            <section >
+                <div class="grid grid-cols-2 gap-4 w-3/4 mx-auto">
+                    <div class=" bg-yellow-300 mt-4  p-6">
+                        <h3 class="text-3xl my-4">money add</h3>
+                        <input type="text" placeholder="$$$$$$" name="" id="input-add" class="block py-1 px-2 border border-rose-300 mb-4 rounded">
+                        <button id="button-add" class="bg-yellow-500 px-4 py-2 rounded block text-white font-medium" >Deposit</button>
+                    </div>
+                    <div class=" bg-blue-300 mt-4  p-6">
+                        <h3 class="text-3xl my-4">Withdraw money</h3>
+                        <input type="text" placeholder="$$$$$$" name="" id="iget" class="block py-1 px-2 border border-rose-300 mb-4 rounded">
+                        <button class="bg-yellow-500 px-4 py-2 rounded block text-white font-medium" id="bget">Get money</button>
+                    </div>
+                </div>
+                
+            </section>
+            
+        </section>
+    </main>
+    <script src="second.js"></script>
+</body>
+</html>
