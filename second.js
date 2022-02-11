@@ -1,30 +1,35 @@
-document.getElementById("button-add1").addEventListener('click', function(){
-    const input = document.getElementById("input-add1");
-    const amount = document.getElementById("amount-innertext");
+function value(inputId){
+    const input =document.getElementById(inputId);
+    const inputValue = parseFloat(input.value);
+    input.value ="";
+    return inputValue;
+}
+function totalAmount(amountId, iv){
+    const amount = document.getElementById(amountId);
     const amountValue =parseFloat(amount.innerText);
-    const inputValue = parseFloat(input.value);
-    const total =inputValue + amountValue;
+    const total =iv + amountValue;
     amount.innerText = total;
-    input.value ="";
+    return total;
+}
+function totalBal(iv, add){
     const bal = document.getElementById("total-bal");
     const bv = parseFloat(bal.innerText);
-    const totalbv = bv + inputValue;
-    bal.innerText = totalbv;
+    if(add == true){
+        const totalbv = bv + iv;
+        bal.innerText = totalbv;
+    }
+    else{
+        const totalbv = bv - iv;
+        bal.innerText = totalbv;
+    }
+}
+document.getElementById("button-add1").addEventListener('click', function(){
+    const inputValue = value("input-add1");
+    const total =totalAmount("amount-innertext", inputValue);
+    totalBal(inputValue, true);
 })
-
 document.getElementById("button-get").addEventListener("click", function(){
-    const input =document.getElementById("input-get");
-    const inputValue = parseFloat(input.value);
-    const amount = document.getElementById("get-money");
-    const amountValue = parseFloat(amount.innerText);
-    const total = inputValue + amountValue;
-    amount.innerText= total;
-    input.value ="";
-    const bal = document.getElementById("total-bal");
-    const bv = parseFloat(bal.innerText);
-    const totalbv = bv - inputValue;
-    bal.innerText = totalbv;    
-    
-
-
+    const inputValue = value("input-get");
+    const total = totalAmount("get-money", inputValue);
+    totalBal(inputValue, false);   
 })
