@@ -1,29 +1,29 @@
-document.getElementById("button-add").addEventListener('click', function(){
-    const input = document.getElementById("input-add");
-    const price = document.getElementById("price");
-    const pvp =parseFloat(price.innerText);
-    const nv = parseFloat(input.value);
-    const total =nv +pvp;
-    price.innerText = total;
+document.getElementById("button-add1").addEventListener('click', function(){
+    const input = document.getElementById("input-add1");
+    const amount = document.getElementById("amount-innertext");
+    const amountValue =parseFloat(amount.innerText);
+    const inputValue = parseFloat(input.value);
+    const total =inputValue + amountValue;
+    amount.innerText = total;
     input.value ="";
-    const bal = document.getElementById("bal");
+    const bal = document.getElementById("total-bal");
     const bv = parseFloat(bal.innerText);
-    const totalbv = bv + total;
+    const totalbv = bv + inputValue;
     bal.innerText = totalbv;
 })
 
-document.getElementById("bget").addEventListener("click", function(){
-    const input =document.getElementById("iget");
+document.getElementById("button-get").addEventListener("click", function(){
+    const input =document.getElementById("input-get");
     const inputValue = parseFloat(input.value);
-    const price = document.getElementById("wm");
-    const priceValue = parseFloat(price.innerText);
-    const total = inputValue + priceValue;
-    price.innerText= total;
+    const amount = document.getElementById("get-money");
+    const amountValue = parseFloat(amount.innerText);
+    const total = inputValue + amountValue;
+    amount.innerText= total;
     input.value ="";
-    const bal = document.getElementById("bal");
+    const bal = document.getElementById("total-bal");
     const bv = parseFloat(bal.innerText);
-    const totalbv = bv - total;
-    bal.innerText = totalbv;
+    const totalbv = bv - inputValue;
+    bal.innerText = totalbv;    
     
 
 
